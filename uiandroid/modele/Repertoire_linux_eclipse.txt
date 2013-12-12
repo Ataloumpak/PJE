@@ -1,0 +1,12 @@
+/enseign/eclipse/eclipse_43_papyrus
+/enseign/eclipse/eclipse_adt
+
+Netoyer .metadata
+project->clean->clean All
+
+
+Note :
+
+Ce que le projet ne fait pas encore :
+	- On ne peut pas include de pages XML dans d'autres pages
+	- Il ne gère pas le MANIFEST.XML

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+<plugin>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated android -->
+      <package uri="http:///model.ecore" class="model.ModelPackage" genModel="modele/android.genmodel"></package>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated uiandroidModel -->
+      <package
+            uri="http:///uiAndroid.ecore"
+            class="uiAndroid.UiAndroidPackage"
+            genModel="modele/uiandroidModel.genmodel"/>
+   </extension>
+
+</plugin>

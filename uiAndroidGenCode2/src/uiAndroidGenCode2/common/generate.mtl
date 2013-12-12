@@ -1,0 +1,17 @@
+[comment encoding = UTF-8 /]
+[module generate('http:///uiAndroid.ecore')]
+
+[template public generateElement(aApplication : Application)]
+[comment @main /]
+[for (cl : Classe | aApplication.classes)]
+[file (cl.nomClasse+'.java', false, 'UTF-8')]
+	[cl.generateElement()/]
+[/file]
+[/for]
+[for (apage : Page | aApplication.pages)]
+	[apage.generateElement()/]
+[/for]
+[/template]
+
+
+

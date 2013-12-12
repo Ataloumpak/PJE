@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:genmodel="http://www.eclipse.org/uml2/2.2.0/GenModel"
+    modelDirectory="/uiandroid/src" modelPluginID="uiandroid" modelName="Uiandroid"
+    rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container" importerID="org.eclipse.uml2.uml.ecore.importer"
+    complianceLevel="7.0" copyrightFields="false" operationReflection="true" importOrganizing="true">
+  <genAnnotations source="http://www.eclipse.org/emf/2002/GenModel/importer/org.eclipse.uml2.uml.ecore.importer">
+    <details key="ECORE_TAGGED_VALUES" value="PROCESS"/>
+    <details key="UNION_PROPERTIES" value="REPORT"/>
+    <details key="DUPLICATE_FEATURES" value="DISCARD"/>
+    <details key="SUBSETTING_PROPERTIES" value="REPORT"/>
+    <details key="VALIDATION_DELEGATES" value="IGNORE"/>
+    <details key="COMMENTS" value="PROCESS"/>
+    <details key="DUPLICATE_FEATURE_INHERITANCE" value="DISCARD"/>
+    <details key="DUPLICATE_OPERATIONS" value="DISCARD"/>
+    <details key="INVARIANT_CONSTRAINTS" value="PROCESS"/>
+    <details key="REDEFINING_PROPERTIES" value="REPORT"/>
+    <details key="ANNOTATION_DETAILS" value="PROCESS"/>
+    <details key="DUPLICATE_OPERATION_INHERITANCE" value="DISCARD"/>
+    <details key="REDEFINING_OPERATIONS" value="REPORT"/>
+    <details key="INVOCATION_DELEGATES" value="IGNORE"/>
+    <details key="DERIVED_FEATURES" value="PROCESS"/>
+    <details key="OPERATION_BODIES" value="IGNORE"/>
+    <details key="CAMEL_CASE_NAMES" value="IGNORE"/>
+    <details key="SUPER_CLASS_ORDER" value="PROCESS"/>
+  </genAnnotations>
+  <foreignModel>uiandroidModel.uml</foreignModel>
+  <genPackages xsi:type="genmodel:GenPackage" prefix="UiAndroid" disposableProviderFactory="true"
+      ecorePackage="uiAndroid.ecore#/">
+    <genDataTypes xsi:type="genmodel:GenDataType" ecoreDataType="uiAndroid.ecore#//int"/>
+    <genDataTypes xsi:type="genmodel:GenDataType" ecoreDataType="uiAndroid.ecore#//String"/>
+    <genDataTypes xsi:type="genmodel:GenDataType" ecoreDataType="uiAndroid.ecore#//boolean"/>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="uiAndroid.ecore#//Page">
+      <genFeatures xsi:type="genmodel:GenFeature" property="None" children="true"
+          createChild="true" ecoreFeature="ecore:EReference uiAndroid.ecore#//Page/layout"/>
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute uiAndroid.ecore#//Page/nom"/>
+    </genClasses>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="uiAndroid.ecore#//Layout">
+      <genFeatures xsi:type="genmodel:GenFeature" property="None" children="true"
+          createChild="true" ecoreFeature="ecore:EReference uiAndroid.ecore#//Layout/views"/>
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute uiAndroid.ecore#//Layout/orientation"/>
+    </genClasses>
+    <genClasses xsi:type="genmodel:GenClass" image="false" ecoreClass="uiAndroid.ecore#//View">
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute uiAndroid.ecore#//View/id"/>
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute uiAndroid.ecore#//View/layout_width"/>
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute uiAndroid.ecore#//View/layout_height"/>
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute uiAndroid.ecore#//View/layout_gravity"/>
+    </genClasses>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="uiAndroid.ecore#//Text"/>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="uiAndroid.ecore#//TextualElement">
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute uiAndroid.ecore#//TextualElement/value"/>
+    </genClasses>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="uiAndroid.ecore#//ValueElement"/>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="uiAndroid.ecore#//Button"/>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="uiAndroid.ecore#//ClickableElement"/>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="uiAndroid.ecore#//VerticalLayout"/>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="uiAndroid.ecore#//HorizontalLayout"/>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="uiAndroid.ecore#//Application">
+      <genFeatures xsi:type="genmodel:GenFeature" property="None" children="true"
+          createChild="true" ecoreFeature="ecore:EReference uiAndroid.ecore#//Application/pages"/>
+      <genFeatures xsi:type="genmodel:GenFeature" property="None" children="true"
+          createChild="true" ecoreFeature="ecore:EReference uiAndroid.ecore#//Application/classes"/>
+      <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
+          propertySortChoices="true" ecoreFeature="ecore:EReference uiAndroid.ecore#//Application/activite_Principale"/>
+    </genClasses>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="uiAndroid.ecore#//Classe">
+      <genFeatures xsi:type="genmodel:GenFeature" property="None" children="true"
+          createChild="true" ecoreFeature="ecore:EReference uiAndroid.ecore#//Classe/attributs"/>
+      <genFeatures xsi:type="genmodel:GenFeature" property="None" children="true"
+          createChild="true" ecoreFeature="ecore:EReference uiAndroid.ecore#//Classe/methodes"/>
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute uiAndroid.ecore#//Classe/nomClasse"/>
+    </genClasses>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="uiAndroid.ecore#//Attribut">
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute uiAndroid.ecore#//Attribut/nomAttribut"/>
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute uiAndroid.ecore#//Attribut/typeAttribut"/>
+    </genClasses>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="uiAndroid.ecore#//Methode">
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute uiAndroid.ecore#//Methode/nomMethode"/>
+      <genFeatures xsi:type="genmodel:GenFeature" property="None" children="true"
+          createChild="true" ecoreFeature="ecore:EReference uiAndroid.ecore#//Methode/paramètres"/>
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute uiAndroid.ecore#//Methode/returnType"/>
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute uiAndroid.ecore#//Methode/corpsMethode"/>
+    </genClasses>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="uiAndroid.ecore#//Activite">
+      <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
+          propertySortChoices="true" ecoreFeature="ecore:EReference uiAndroid.ecore#//Activite/classe"/>
+      <genFeatures xsi:type="genmodel:GenFeature" property="None" children="true"
+          createChild="true" ecoreFeature="ecore:EReference uiAndroid.ecore#//Activite/intentPackage"/>
+    </genClasses>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="uiAndroid.ecore#//IntentPackage">
+      <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
+          propertySortChoices="true" ecoreFeature="ecore:EReference uiAndroid.ecore#//IntentPackage/activiteCible"/>
+      <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
+          propertySortChoices="true" ecoreFeature="ecore:EReference uiAndroid.ecore#//IntentPackage/pressedButton"/>
+      <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
+          propertySortChoices="true" ecoreFeature="ecore:EReference uiAndroid.ecore#//IntentPackage/ValueTransferedElement"/>
+    </genClasses>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="uiAndroid.ecore#//IntegerElement">
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute uiAndroid.ecore#//IntegerElement/value"/>
+    </genClasses>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="uiAndroid.ecore#//BooleanElement">
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute uiAndroid.ecore#//BooleanElement/value"/>
+    </genClasses>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="uiAndroid.ecore#//Checkbox"/>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="uiAndroid.ecore#//TimePicker"/>
+  </genPackages>
+</genmodel:GenModel>

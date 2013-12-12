@@ -1,0 +1,17 @@
+	<layout>
+		<button
+				android:id="@+id/0"
+				android:layout_width=""
+				android:layout_height=""
+				android:layout_gravity=""
+		/>
+		<textView 
+				android:id="@+id/0"
+				android:layout_width=""
+				android:layout_height=""
+				android:layout_gravity=""
+		
+		>
+			
+		</textView>
+	</layout>

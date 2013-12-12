@@ -1,0 +1,76 @@
+[comment encoding = UTF-8 /]
+[module generateJava('http:///uiAndroid.ecore')]
+
+[comment ---- Partie Java ------------------------- /]
+
+[template public generateElement(aClasse : Classe)]
+public class [aClasse.nomClasse/]
+{
+[comment Paramètres de classe /]
+[for (att : Attribut | aClasse.attributs)]
+[att.generateElement()/]
+[/for]
+
+[comment getters/setters /]
+[for (att : Attribut | aClasse.attributs)]
+[att.generateGSet()/]
+[/for]
+
+[comment méthodes /]
+[for (meth : Methode | aClasse.methodes)]
+[meth.generateElement()/]
+[/for]
+}
+[/template]
+
+[template public generateElement(aMethode : Methode)]
+public [aMethode.returnType/] [aMethode.nomMethode/]()
+{
+	[aMethode.returnType/] res;
+	return res;
+}
+[/template]
+
+[template public generateElement(aActivite : Activite)]
+public class [aActivite.nomClasse/] extends Activity {
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.activity_main);
+	}
+	
+}
+[/template]
+
+[template public generateElement(aAttribut : Attribut)]
+	private [aAttribut.typeAttribut/] [aAttribut.nomAttribut/];
+[/template]
+
+[template public generateGSet(aAttribut : Attribut)]
+	public [aAttribut.typeAttribut/] get[aAttribut.nomAttribut/]()
+	{
+		return [aAttribut.nomAttribut/];
+	}
+
+	public void set[aAttribut.nomAttribut/]([aAttribut.typeAttribut/] [aAttribut.nomAttribut/])
+	{
+		this.[aAttribut.nomAttribut/] = [aAttribut.nomAttribut/];
+	}
+[/template]
+
+[template public generateElement(aIntent : IntentPackage)]
+Intent i = new Intent([aIntent.qqch/].this, [aIntent.activiteCible/].class);
+[for (value : ValueElement | aIntent.ValueTransferedElement)]*
+	[generateReturn(value)/]
+	
+[/for]
+startActivity(i);
+[/template]
+
+[template public generateReturn(aVElement : ValueElement)]
+// !! CARE !!
+// Vous tentez de transferer la valeur d'un ValueElement, Veuillez fixer votre code SVP
+[/template]
+[template public generateReturn(aTElement : TextualElement)]
+	i.putExtra("[aTElement.value/]",0);
+[/template]

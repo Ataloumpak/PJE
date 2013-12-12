@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uiAndroid:Application xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:uiAndroid="http:///uiAndroid.ecore" activite_Principale="//@classes.1">
+  <pages nom="layout">
+    <layout xsi:type="uiAndroid:VerticalLayout">
+      <views xsi:type="uiAndroid:Button" layout_gravity="0"/>
+      <views xsi:type="uiAndroid:Text"/>
+    </layout>
+  </pages>
+  <classes nomClasse="Jeu">
+    <attributs nomAttribut="Déroulement" typeAttribut="int"/>
+    <attributs nomAttribut="ok" typeAttribut="boolean"/>
+    <methodes nomMethode="jouer" returnType="void" corpsMethode="">
+      <paramètres nomAttribut="toto" typeAttribut="String"/>
+    </methodes>
+  </classes>
+  <classes xsi:type="uiAndroid:Activite" nomClasse="MainActivity">
+    <attributs nomAttribut="tintin" typeAttribut="String"/>
+    <methodes nomMethode="affichage" returnType="void" corpsMethode="system.out.println(&quot;corps methode&quot;);"/>
+  </classes>
+  <classes xsi:type="uiAndroid:Activite" nomClasse="SecondeActivity"/>
+</uiAndroid:Application>
