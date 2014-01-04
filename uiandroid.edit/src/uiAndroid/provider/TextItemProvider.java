@@ -73,8 +73,11 @@ public class TextItemProvider
 	 */
 	@Override
 	public String getText(Object object) {
-		Text text = (Text)object;
-		return getString("_UI_Text_type") + " " + text.getId();
+		Object labelValue = ((Text)object).getId();
+		String label = labelValue == null ? null : labelValue.toString();
+		return label == null || label.length() == 0 ?
+			getString("_UI_Text_type") :
+			getString("_UI_Text_type") + " " + label;
 	}
 
 	/**

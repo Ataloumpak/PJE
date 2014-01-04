@@ -103,8 +103,11 @@ public class IntegerElementItemProvider
 	 */
 	@Override
 	public String getText(Object object) {
-		IntegerElement integerElement = (IntegerElement)object;
-		return getString("_UI_IntegerElement_type") + " " + integerElement.getId();
+		Object labelValue = ((IntegerElement)object).getId();
+		String label = labelValue == null ? null : labelValue.toString();
+		return label == null || label.length() == 0 ?
+			getString("_UI_IntegerElement_type") :
+			getString("_UI_IntegerElement_type") + " " + label;
 	}
 
 	/**

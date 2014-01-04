@@ -118,29 +118,6 @@ public class UiAndroidItemProviderAdapterFactory extends UiAndroidAdapterFactory
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link uiAndroid.TextualElement} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected TextualElementItemProvider textualElementItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link uiAndroid.TextualElement}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createTextualElementAdapter() {
-		if (textualElementItemProvider == null) {
-			textualElementItemProvider = new TextualElementItemProvider(this);
-		}
-
-		return textualElementItemProvider;
-	}
-
-	/**
 	 * This keeps track of the one adapter used for all {@link uiAndroid.ValueElement} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -184,29 +161,6 @@ public class UiAndroidItemProviderAdapterFactory extends UiAndroidAdapterFactory
 		}
 
 		return buttonItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link uiAndroid.ClickableElement} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected ClickableElementItemProvider clickableElementItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link uiAndroid.ClickableElement}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createClickableElementAdapter() {
-		if (clickableElementItemProvider == null) {
-			clickableElementItemProvider = new ClickableElementItemProvider(this);
-		}
-
-		return clickableElementItemProvider;
 	}
 
 	/**
@@ -394,52 +348,6 @@ public class UiAndroidItemProviderAdapterFactory extends UiAndroidAdapterFactory
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link uiAndroid.IntegerElement} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected IntegerElementItemProvider integerElementItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link uiAndroid.IntegerElement}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createIntegerElementAdapter() {
-		if (integerElementItemProvider == null) {
-			integerElementItemProvider = new IntegerElementItemProvider(this);
-		}
-
-		return integerElementItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link uiAndroid.BooleanElement} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected BooleanElementItemProvider booleanElementItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link uiAndroid.BooleanElement}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createBooleanElementAdapter() {
-		if (booleanElementItemProvider == null) {
-			booleanElementItemProvider = new BooleanElementItemProvider(this);
-		}
-
-		return booleanElementItemProvider;
-	}
-
-	/**
 	 * This keeps track of the one adapter used for all {@link uiAndroid.Checkbox} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -586,10 +494,8 @@ public class UiAndroidItemProviderAdapterFactory extends UiAndroidAdapterFactory
 	public void dispose() {
 		if (pageItemProvider != null) pageItemProvider.dispose();
 		if (textItemProvider != null) textItemProvider.dispose();
-		if (textualElementItemProvider != null) textualElementItemProvider.dispose();
 		if (valueElementItemProvider != null) valueElementItemProvider.dispose();
 		if (buttonItemProvider != null) buttonItemProvider.dispose();
-		if (clickableElementItemProvider != null) clickableElementItemProvider.dispose();
 		if (verticalLayoutItemProvider != null) verticalLayoutItemProvider.dispose();
 		if (horizontalLayoutItemProvider != null) horizontalLayoutItemProvider.dispose();
 		if (applicationItemProvider != null) applicationItemProvider.dispose();
@@ -598,8 +504,6 @@ public class UiAndroidItemProviderAdapterFactory extends UiAndroidAdapterFactory
 		if (methodeItemProvider != null) methodeItemProvider.dispose();
 		if (activiteItemProvider != null) activiteItemProvider.dispose();
 		if (intentPackageItemProvider != null) intentPackageItemProvider.dispose();
-		if (integerElementItemProvider != null) integerElementItemProvider.dispose();
-		if (booleanElementItemProvider != null) booleanElementItemProvider.dispose();
 		if (checkboxItemProvider != null) checkboxItemProvider.dispose();
 		if (timePickerItemProvider != null) timePickerItemProvider.dispose();
 	}

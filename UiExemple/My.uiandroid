@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uiAndroid:Application xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:uiAndroid="http:///uiAndroid.ecore">
+  <pages>
+    <layout xsi:type="uiAndroid:VerticalLayout">
+      <views xsi:type="uiAndroid:Button" id="test" value="test"/>
+      <views xsi:type="uiAndroid:Text" value=""/>
+    </layout>
+  </pages>
+  <classes>
+    <attributs/>
+    <methodes>
+      <paramètres/>
+    </methodes>
+  </classes>
+  <classes xsi:type="uiAndroid:Activite" nomClasse="Main">
+    <intentPackage activiteCible="//@classes.2" pressedButton="//@pages.0/@layout/@views.0" ValueTransferedElement="//@pages.0/@layout/@views.0"/>
+  </classes>
+  <classes xsi:type="uiAndroid:Activite" nomClasse="result"/>
+</uiAndroid:Application>

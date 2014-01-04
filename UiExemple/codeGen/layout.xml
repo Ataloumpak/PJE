@@ -1,17 +1,17 @@
-	<layout>
-		<button
-				android:id="@+id/0"
-				android:layout_width=""
-				android:layout_height=""
-				android:layout_gravity=""
-		/>
-		<textView 
-				android:id="@+id/0"
-				android:layout_width=""
-				android:layout_height=""
-				android:layout_gravity=""
+<layout>
+	<button
+			android:id="@+id/0"
+			android:layout_width="0"
+			android:layout_height="0"
+			android:layout_gravity="0"
+	/>
+	<textView 
+			android:id="@+id/0"
+			android:layout_width="0"
+			android:layout_height="0"
+			android:layout_gravity="0"
+	
+	>
 		
-		>
-			
-		</textView>
-	</layout>
+	</textView>
+</layout>

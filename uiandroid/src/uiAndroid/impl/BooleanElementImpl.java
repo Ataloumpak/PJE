@@ -24,7 +24,7 @@ import uiAndroid.UiAndroidPackage;
  *
  * @generated
  */
-public class BooleanElementImpl extends ValueElementImpl implements BooleanElement {
+public abstract class BooleanElementImpl extends ValueElementImpl implements BooleanElement {
 	/**
 	 * The default value of the '{@link #isValue() <em>Value</em>}' attribute.
 	 * <!-- begin-user-doc -->

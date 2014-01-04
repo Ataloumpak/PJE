@@ -2,10 +2,7 @@
  */
 package uiAndroid.tests;
 
-import junit.textui.TestRunner;
-
 import uiAndroid.IntegerElement;
-import uiAndroid.UiAndroidFactory;
 
 /**
  * <!-- begin-user-doc -->
@@ -13,16 +10,7 @@ import uiAndroid.UiAndroidFactory;
  * <!-- end-user-doc -->
  * @generated
  */
-public class IntegerElementTest extends ValueElementTest {
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public static void main(String[] args) {
-		TestRunner.run(IntegerElementTest.class);
-	}
+public abstract class IntegerElementTest extends ValueElementTest {
 
 	/**
 	 * Constructs a new Integer Element test case with the given name.
@@ -43,28 +31,6 @@ public class IntegerElementTest extends ValueElementTest {
 	@Override
 	protected IntegerElement getFixture() {
 		return (IntegerElement)fixture;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see junit.framework.TestCase#setUp()
-	 * @generated
-	 */
-	@Override
-	protected void setUp() throws Exception {
-		setFixture(UiAndroidFactory.eINSTANCE.createIntegerElement());
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see junit.framework.TestCase#tearDown()
-	 * @generated
-	 */
-	@Override
-	protected void tearDown() throws Exception {
-		setFixture(null);
 	}
 
 } //IntegerElementTest

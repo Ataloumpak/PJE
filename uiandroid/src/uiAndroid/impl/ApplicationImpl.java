@@ -34,6 +34,7 @@ import uiAndroid.UiAndroidPackage;
  *   <li>{@link uiAndroid.impl.ApplicationImpl#getPages <em>Pages</em>}</li>
  *   <li>{@link uiAndroid.impl.ApplicationImpl#getClasses <em>Classes</em>}</li>
  *   <li>{@link uiAndroid.impl.ApplicationImpl#getActivite_Principale <em>Activite Principale</em>}</li>
+ *   <li>{@link uiAndroid.impl.ApplicationImpl#getNomAppli <em>Nom Appli</em>}</li>
  * </ul>
  * </p>
  *
@@ -69,6 +70,26 @@ public class ApplicationImpl extends MinimalEObjectImpl.Container implements App
 	 * @ordered
 	 */
 	protected Activite activite_Principale;
+
+	/**
+	 * The default value of the '{@link #getNomAppli() <em>Nom Appli</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getNomAppli()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final Object NOM_APPLI_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getNomAppli() <em>Nom Appli</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getNomAppli()
+	 * @generated
+	 * @ordered
+	 */
+	protected Object nomAppli = NOM_APPLI_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -156,6 +177,27 @@ public class ApplicationImpl extends MinimalEObjectImpl.Container implements App
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public Object getNomAppli() {
+		return nomAppli;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setNomAppli(Object newNomAppli) {
+		Object oldNomAppli = nomAppli;
+		nomAppli = newNomAppli;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, UiAndroidPackage.APPLICATION__NOM_APPLI, oldNomAppli, nomAppli));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
@@ -182,6 +224,8 @@ public class ApplicationImpl extends MinimalEObjectImpl.Container implements App
 			case UiAndroidPackage.APPLICATION__ACTIVITE_PRINCIPALE:
 				if (resolve) return getActivite_Principale();
 				return basicGetActivite_Principale();
+			case UiAndroidPackage.APPLICATION__NOM_APPLI:
+				return getNomAppli();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -206,6 +250,9 @@ public class ApplicationImpl extends MinimalEObjectImpl.Container implements App
 			case UiAndroidPackage.APPLICATION__ACTIVITE_PRINCIPALE:
 				setActivite_Principale((Activite)newValue);
 				return;
+			case UiAndroidPackage.APPLICATION__NOM_APPLI:
+				setNomAppli((Object)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -227,6 +274,9 @@ public class ApplicationImpl extends MinimalEObjectImpl.Container implements App
 			case UiAndroidPackage.APPLICATION__ACTIVITE_PRINCIPALE:
 				setActivite_Principale((Activite)null);
 				return;
+			case UiAndroidPackage.APPLICATION__NOM_APPLI:
+				setNomAppli(NOM_APPLI_EDEFAULT);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -245,8 +295,26 @@ public class ApplicationImpl extends MinimalEObjectImpl.Container implements App
 				return classes != null && !classes.isEmpty();
 			case UiAndroidPackage.APPLICATION__ACTIVITE_PRINCIPALE:
 				return activite_Principale != null;
+			case UiAndroidPackage.APPLICATION__NOM_APPLI:
+				return NOM_APPLI_EDEFAULT == null ? nomAppli != null : !NOM_APPLI_EDEFAULT.equals(nomAppli);
 		}
 		return super.eIsSet(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String toString() {
+		if (eIsProxy()) return super.toString();
+
+		StringBuffer result = new StringBuffer(super.toString());
+		result.append(" (nomAppli: ");
+		result.append(nomAppli);
+		result.append(')');
+		return result.toString();
 	}
 
 } //ApplicationImpl

@@ -3,17 +3,13 @@
 package uiAndroid.impl;
 
 import java.util.Collection;
-
-import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EList;
-
 import org.eclipse.emf.ecore.EClass;
-
 import org.eclipse.emf.ecore.InternalEObject;
-import org.eclipse.emf.ecore.impl.ENotificationImpl;
+import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.EObjectResolvingEList;
-
+import org.eclipse.emf.ecore.util.InternalEList;
 import uiAndroid.Activite;
 import uiAndroid.Classe;
 import uiAndroid.IntentPackage;
@@ -45,14 +41,14 @@ public class ActiviteImpl extends ClasseImpl implements Activite {
 	protected EList<Classe> classe;
 
 	/**
-	 * The cached value of the '{@link #getIntentPackage() <em>Intent Package</em>}' containment reference.
+	 * The cached value of the '{@link #getIntentPackage() <em>Intent Package</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getIntentPackage()
 	 * @generated
 	 * @ordered
 	 */
-	protected IntentPackage intentPackage;
+	protected EList<IntentPackage> intentPackage;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -90,42 +86,11 @@ public class ActiviteImpl extends ClasseImpl implements Activite {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public IntentPackage getIntentPackage() {
+	public EList<IntentPackage> getIntentPackage() {
+		if (intentPackage == null) {
+			intentPackage = new EObjectContainmentEList<IntentPackage>(IntentPackage.class, this, UiAndroidPackage.ACTIVITE__INTENT_PACKAGE);
+		}
 		return intentPackage;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public NotificationChain basicSetIntentPackage(IntentPackage newIntentPackage, NotificationChain msgs) {
-		IntentPackage oldIntentPackage = intentPackage;
-		intentPackage = newIntentPackage;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, UiAndroidPackage.ACTIVITE__INTENT_PACKAGE, oldIntentPackage, newIntentPackage);
-			if (msgs == null) msgs = notification; else msgs.add(notification);
-		}
-		return msgs;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setIntentPackage(IntentPackage newIntentPackage) {
-		if (newIntentPackage != intentPackage) {
-			NotificationChain msgs = null;
-			if (intentPackage != null)
-				msgs = ((InternalEObject)intentPackage).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - UiAndroidPackage.ACTIVITE__INTENT_PACKAGE, null, msgs);
-			if (newIntentPackage != null)
-				msgs = ((InternalEObject)newIntentPackage).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - UiAndroidPackage.ACTIVITE__INTENT_PACKAGE, null, msgs);
-			msgs = basicSetIntentPackage(newIntentPackage, msgs);
-			if (msgs != null) msgs.dispatch();
-		}
-		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, UiAndroidPackage.ACTIVITE__INTENT_PACKAGE, newIntentPackage, newIntentPackage));
 	}
 
 	/**
@@ -137,7 +102,7 @@ public class ActiviteImpl extends ClasseImpl implements Activite {
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
 			case UiAndroidPackage.ACTIVITE__INTENT_PACKAGE:
-				return basicSetIntentPackage(null, msgs);
+				return ((InternalEList<?>)getIntentPackage()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -172,7 +137,8 @@ public class ActiviteImpl extends ClasseImpl implements Activite {
 				getClasse().addAll((Collection<? extends Classe>)newValue);
 				return;
 			case UiAndroidPackage.ACTIVITE__INTENT_PACKAGE:
-				setIntentPackage((IntentPackage)newValue);
+				getIntentPackage().clear();
+				getIntentPackage().addAll((Collection<? extends IntentPackage>)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -190,7 +156,7 @@ public class ActiviteImpl extends ClasseImpl implements Activite {
 				getClasse().clear();
 				return;
 			case UiAndroidPackage.ACTIVITE__INTENT_PACKAGE:
-				setIntentPackage((IntentPackage)null);
+				getIntentPackage().clear();
 				return;
 		}
 		super.eUnset(featureID);
@@ -207,7 +173,7 @@ public class ActiviteImpl extends ClasseImpl implements Activite {
 			case UiAndroidPackage.ACTIVITE__CLASSE:
 				return classe != null && !classe.isEmpty();
 			case UiAndroidPackage.ACTIVITE__INTENT_PACKAGE:
-				return intentPackage != null;
+				return intentPackage != null && !intentPackage.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

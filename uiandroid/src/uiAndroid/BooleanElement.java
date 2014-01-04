@@ -16,7 +16,7 @@ package uiAndroid;
  * </p>
  *
  * @see uiAndroid.UiAndroidPackage#getBooleanElement()
- * @model
+ * @model abstract="true"
  * @generated
  */
 public interface BooleanElement extends ValueElement {

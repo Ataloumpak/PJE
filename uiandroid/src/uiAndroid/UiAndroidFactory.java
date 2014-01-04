@@ -40,15 +40,6 @@ public interface UiAndroidFactory extends EFactory {
 	Text createText();
 
 	/**
-	 * Returns a new object of class '<em>Textual Element</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Textual Element</em>'.
-	 * @generated
-	 */
-	TextualElement createTextualElement();
-
-	/**
 	 * Returns a new object of class '<em>Value Element</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -65,15 +56,6 @@ public interface UiAndroidFactory extends EFactory {
 	 * @generated
 	 */
 	Button createButton();
-
-	/**
-	 * Returns a new object of class '<em>Clickable Element</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Clickable Element</em>'.
-	 * @generated
-	 */
-	ClickableElement createClickableElement();
 
 	/**
 	 * Returns a new object of class '<em>Vertical Layout</em>'.
@@ -146,24 +128,6 @@ public interface UiAndroidFactory extends EFactory {
 	 * @generated
 	 */
 	IntentPackage createIntentPackage();
-
-	/**
-	 * Returns a new object of class '<em>Integer Element</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Integer Element</em>'.
-	 * @generated
-	 */
-	IntegerElement createIntegerElement();
-
-	/**
-	 * Returns a new object of class '<em>Boolean Element</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Boolean Element</em>'.
-	 * @generated
-	 */
-	BooleanElement createBooleanElement();
 
 	/**
 	 * Returns a new object of class '<em>Checkbox</em>'.

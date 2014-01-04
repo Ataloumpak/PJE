@@ -73,8 +73,11 @@ public class ButtonItemProvider
 	 */
 	@Override
 	public String getText(Object object) {
-		Button button = (Button)object;
-		return getString("_UI_Button_type") + " " + button.getId();
+		Object labelValue = ((Button)object).getId();
+		String label = labelValue == null ? null : labelValue.toString();
+		return label == null || label.length() == 0 ?
+			getString("_UI_Button_type") :
+			getString("_UI_Button_type") + " " + label;
 	}
 
 	/**

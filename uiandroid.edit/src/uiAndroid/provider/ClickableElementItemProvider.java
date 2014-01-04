@@ -76,8 +76,11 @@ public class ClickableElementItemProvider
 	 */
 	@Override
 	public String getText(Object object) {
-		ClickableElement clickableElement = (ClickableElement)object;
-		return getString("_UI_ClickableElement_type") + " " + clickableElement.getId();
+		Object labelValue = ((ClickableElement)object).getId();
+		String label = labelValue == null ? null : labelValue.toString();
+		return label == null || label.length() == 0 ?
+			getString("_UI_ClickableElement_type") :
+			getString("_UI_ClickableElement_type") + " " + label;
 	}
 
 	/**

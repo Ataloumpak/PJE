@@ -15,7 +15,7 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="View" abstract="true" interface="true">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" ordered="false" lowerBound="1"
-        eType="#//int"/>
+        eType="#//String"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="layout_width" ordered="false"
         lowerBound="1" eType="#//int"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="layout_height" ordered="false"
@@ -23,16 +23,16 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="layout_gravity" ordered="false"
         lowerBound="1" eType="#//int"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EDataType" name="int" instanceClassName="int"/>
   <eClassifiers xsi:type="ecore:EDataType" name="String" instanceClassName="String"/>
+  <eClassifiers xsi:type="ecore:EDataType" name="int" instanceClassName="int"/>
   <eClassifiers xsi:type="ecore:EClass" name="Text" eSuperTypes="#//TextualElement"/>
-  <eClassifiers xsi:type="ecore:EClass" name="TextualElement" eSuperTypes="#//ValueElement">
+  <eClassifiers xsi:type="ecore:EClass" name="TextualElement" abstract="true" eSuperTypes="#//ValueElement">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" ordered="false"
         lowerBound="1" eType="#//String"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ValueElement" eSuperTypes="#//View"/>
   <eClassifiers xsi:type="ecore:EClass" name="Button" eSuperTypes="#//ClickableElement"/>
-  <eClassifiers xsi:type="ecore:EClass" name="ClickableElement" eSuperTypes="#//TextualElement"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ClickableElement" abstract="true" eSuperTypes="#//TextualElement"/>
   <eClassifiers xsi:type="ecore:EClass" name="VerticalLayout" eSuperTypes="#//Layout"/>
   <eClassifiers xsi:type="ecore:EClass" name="HorizontalLayout" eSuperTypes="#//Layout"/>
   <eClassifiers xsi:type="ecore:EClass" name="Application">
@@ -42,6 +42,8 @@
         lowerBound="1" upperBound="-1" eType="#//Classe" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="activite_Principale" ordered="false"
         lowerBound="1" eType="#//Activite"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="nomAppli" ordered="false"
+        lowerBound="1" eType="#//String"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Classe">
     <eStructuralFeatures xsi:type="ecore:EReference" name="attributs" ordered="false"
@@ -71,7 +73,7 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="classe" ordered="false"
         upperBound="-1" eType="#//Classe"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="intentPackage" ordered="false"
-        lowerBound="1" eType="#//IntentPackage" containment="true"/>
+        upperBound="-1" eType="#//IntentPackage" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="IntentPackage">
     <eStructuralFeatures xsi:type="ecore:EReference" name="activiteCible" ordered="false"
@@ -82,11 +84,11 @@
         ordered="false" upperBound="-1" eType="#//ValueElement"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EDataType" name="boolean" instanceClassName="boolean"/>
-  <eClassifiers xsi:type="ecore:EClass" name="IntegerElement" eSuperTypes="#//ValueElement">
+  <eClassifiers xsi:type="ecore:EClass" name="IntegerElement" abstract="true" eSuperTypes="#//ValueElement">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" ordered="false"
         lowerBound="1" eType="#//int"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="BooleanElement" eSuperTypes="#//ValueElement">
+  <eClassifiers xsi:type="ecore:EClass" name="BooleanElement" abstract="true" eSuperTypes="#//ValueElement">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" ordered="false"
         lowerBound="1" eType="#//boolean"/>
   </eClassifiers>

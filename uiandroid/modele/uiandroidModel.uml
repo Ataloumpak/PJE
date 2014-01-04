@@ -28,7 +28,7 @@
     </ownedAttribute>
   </packagedElement>
   <packagedElement xmi:type="uml:Interface" xmi:id="_ysP7oEbqEeOG7JZTkkmz2A" name="View">
-    <ownedAttribute xmi:type="uml:Property" xmi:id="_hy0lgEecEeO1e8nrKe-5xA" name="id" visibility="public" type="_sRFUIEecEeO1e8nrKe-5xA">
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_hy0lgEecEeO1e8nrKe-5xA" name="id" visibility="public" type="_tK1moEecEeO1e8nrKe-5xA">
       <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_wT7egEecEeO1e8nrKe-5xA" value="1"/>
       <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_wUBlIEecEeO1e8nrKe-5xA" value="1"/>
       <defaultValue xmi:type="uml:LiteralString" xmi:id="_wUBlIUecEeO1e8nrKe-5xA">
@@ -196,8 +196,8 @@
       <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_zRSLslK5EeOo_YIWE-FU6g" value="*"/>
     </ownedAttribute>
     <ownedAttribute xmi:type="uml:Property" xmi:id="_QvzCcFg8EeOg1No9UXAcmA" name="intentPackage" type="_FS79kFg8EeOg1No9UXAcmA" aggregation="composite" association="_QvzpgFg8EeOg1No9UXAcmA">
-      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_QvzCcVg8EeOg1No9UXAcmA" value="1"/>
-      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_QvzCclg8EeOg1No9UXAcmA" value="1"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_QvzCcVg8EeOg1No9UXAcmA"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_QvzCclg8EeOg1No9UXAcmA" value="*"/>
     </ownedAttribute>
   </packagedElement>
   <packagedElement xmi:type="uml:Association" xmi:id="_6w3_MFK4EeOo_YIWE-FU6g" name="application_classe_2" memberEnd="_6w3_MVK4EeOo_YIWE-FU6g _6w3YIFK4EeOo_YIWE-FU6g">
@@ -218,10 +218,10 @@
       <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_zRSyw1K5EeOo_YIWE-FU6g" value="1"/>
     </ownedEnd>
   </packagedElement>
-  <packagedElement xmi:type="uml:Class" xmi:id="_PFHRAFg2EeOg1No9UXAcmA" name="ClickableElement">
+  <packagedElement xmi:type="uml:Class" xmi:id="_PFHRAFg2EeOg1No9UXAcmA" name="ClickableElement" isAbstract="true">
     <generalization xmi:type="uml:Generalization" xmi:id="_Wf5nkFg2EeOg1No9UXAcmA" general="_TqrG4Fg2EeOg1No9UXAcmA"/>
   </packagedElement>
-  <packagedElement xmi:type="uml:Class" xmi:id="_TqrG4Fg2EeOg1No9UXAcmA" name="TextualElement">
+  <packagedElement xmi:type="uml:Class" xmi:id="_TqrG4Fg2EeOg1No9UXAcmA" name="TextualElement" isAbstract="true">
     <generalization xmi:type="uml:Generalization" xmi:id="_dfuxYFg_EeOg1No9UXAcmA" general="_-XCbEFg-EeOg1No9UXAcmA"/>
     <ownedAttribute xmi:type="uml:Property" xmi:id="_UTo5cFg4EeOg1No9UXAcmA" name="value" visibility="public" type="_tK1moEecEeO1e8nrKe-5xA">
       <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_V4QG0Fg4EeOg1No9UXAcmA" value="1"/>
@@ -282,7 +282,7 @@
   <packagedElement xmi:type="uml:Class" xmi:id="_-XCbEFg-EeOg1No9UXAcmA" name="ValueElement">
     <generalization xmi:type="uml:Generalization" xmi:id="_RzDzEFg4EeOg1No9UXAcmA" general="_ysP7oEbqEeOG7JZTkkmz2A"/>
   </packagedElement>
-  <packagedElement xmi:type="uml:Class" xmi:id="_EmgOAFg_EeOg1No9UXAcmA" name="IntegerElement">
+  <packagedElement xmi:type="uml:Class" xmi:id="_EmgOAFg_EeOg1No9UXAcmA" name="IntegerElement" isAbstract="true">
     <generalization xmi:type="uml:Generalization" xmi:id="_d84AYFg_EeOg1No9UXAcmA" general="_-XCbEFg-EeOg1No9UXAcmA"/>
     <ownedAttribute xmi:type="uml:Property" xmi:id="_FsrhAFhBEeOg1No9UXAcmA" name="value" visibility="public" type="_sRFUIEecEeO1e8nrKe-5xA">
       <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_HQ8JEFhBEeOg1No9UXAcmA" value="1"/>
@@ -292,7 +292,7 @@
       </defaultValue>
     </ownedAttribute>
   </packagedElement>
-  <packagedElement xmi:type="uml:Class" xmi:id="_OVNH8Fg_EeOg1No9UXAcmA" name="BooleanElement">
+  <packagedElement xmi:type="uml:Class" xmi:id="_OVNH8Fg_EeOg1No9UXAcmA" name="BooleanElement" isAbstract="true">
     <generalization xmi:type="uml:Generalization" xmi:id="_eWnWEFg_EeOg1No9UXAcmA" general="_-XCbEFg-EeOg1No9UXAcmA"/>
     <ownedAttribute xmi:type="uml:Property" xmi:id="_IRj4kFhBEeOg1No9UXAcmA" name="value" visibility="public" type="_HIlYMFK4EeOo_YIWE-FU6g">
       <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_JDXwAFhBEeOg1No9UXAcmA" value="1"/>

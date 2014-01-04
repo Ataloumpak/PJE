@@ -39,29 +39,19 @@ public interface Activite extends Classe {
 	EList<Classe> getClasse();
 
 	/**
-	 * Returns the value of the '<em><b>Intent Package</b></em>' containment reference.
+	 * Returns the value of the '<em><b>Intent Package</b></em>' containment reference list.
+	 * The list contents are of type {@link uiAndroid.IntentPackage}.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Intent Package</em>' containment reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Intent Package</em>' containment reference.
-	 * @see #setIntentPackage(IntentPackage)
+	 * @return the value of the '<em>Intent Package</em>' containment reference list.
 	 * @see uiAndroid.UiAndroidPackage#getActivite_IntentPackage()
-	 * @model containment="true" required="true" ordered="false"
+	 * @model containment="true" ordered="false"
 	 * @generated
 	 */
-	IntentPackage getIntentPackage();
-
-	/**
-	 * Sets the value of the '{@link uiAndroid.Activite#getIntentPackage <em>Intent Package</em>}' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Intent Package</em>' containment reference.
-	 * @see #getIntentPackage()
-	 * @generated
-	 */
-	void setIntentPackage(IntentPackage value);
+	EList<IntentPackage> getIntentPackage();
 
 } // Activite

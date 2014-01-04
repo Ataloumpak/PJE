@@ -33,12 +33,12 @@ public interface View extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Id</em>' attribute.
-	 * @see #setId(int)
+	 * @see #setId(String)
 	 * @see uiAndroid.UiAndroidPackage#getView_Id()
-	 * @model dataType="uiAndroid.int" required="true" ordered="false"
+	 * @model dataType="uiAndroid.String" required="true" ordered="false"
 	 * @generated
 	 */
-	int getId();
+	Object getId();
 
 	/**
 	 * Sets the value of the '{@link uiAndroid.View#getId <em>Id</em>}' attribute.
@@ -48,7 +48,7 @@ public interface View extends EObject {
 	 * @see #getId()
 	 * @generated
 	 */
-	void setId(int value);
+	void setId(Object value);
 
 	/**
 	 * Returns the value of the '<em><b>Layout width</b></em>' attribute.

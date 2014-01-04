@@ -89,7 +89,7 @@ public class LayoutItemProvider
 				 true,
 				 false,
 				 false,
-				 ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
 				 null,
 				 null));
 	}
@@ -231,8 +231,11 @@ public class LayoutItemProvider
 	 */
 	@Override
 	public String getText(Object object) {
-		Layout layout = (Layout)object;
-		return getString("_UI_Layout_type") + " " + layout.getId();
+		Object labelValue = ((Layout)object).getId();
+		String label = labelValue == null ? null : labelValue.toString();
+		return label == null || label.length() == 0 ?
+			getString("_UI_Layout_type") :
+			getString("_UI_Layout_type") + " " + label;
 	}
 
 	/**
@@ -280,17 +283,7 @@ public class LayoutItemProvider
 		newChildDescriptors.add
 			(createChildParameter
 				(UiAndroidPackage.Literals.LAYOUT__VIEWS,
-				 UiAndroidFactory.eINSTANCE.createTextualElement()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(UiAndroidPackage.Literals.LAYOUT__VIEWS,
 				 UiAndroidFactory.eINSTANCE.createText()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(UiAndroidPackage.Literals.LAYOUT__VIEWS,
-				 UiAndroidFactory.eINSTANCE.createClickableElement()));
 
 		newChildDescriptors.add
 			(createChildParameter
@@ -306,16 +299,6 @@ public class LayoutItemProvider
 			(createChildParameter
 				(UiAndroidPackage.Literals.LAYOUT__VIEWS,
 				 UiAndroidFactory.eINSTANCE.createHorizontalLayout()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(UiAndroidPackage.Literals.LAYOUT__VIEWS,
-				 UiAndroidFactory.eINSTANCE.createIntegerElement()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(UiAndroidPackage.Literals.LAYOUT__VIEWS,
-				 UiAndroidFactory.eINSTANCE.createBooleanElement()));
 
 		newChildDescriptors.add
 			(createChildParameter

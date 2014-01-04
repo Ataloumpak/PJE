@@ -20,6 +20,7 @@ import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.IItemPropertySource;
 import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
 import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
+import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
@@ -63,6 +64,7 @@ public class ApplicationItemProvider
 			super.getPropertyDescriptors(object);
 
 			addActivite_PrincipalePropertyDescriptor(object);
+			addNomAppliPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -85,6 +87,28 @@ public class ApplicationItemProvider
 				 false,
 				 true,
 				 null,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Nom Appli feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addNomAppliPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_Application_nomAppli_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Application_nomAppli_feature", "_UI_Application_type"),
+				 UiAndroidPackage.Literals.APPLICATION__NOM_APPLI,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
 				 null,
 				 null));
 	}
@@ -139,7 +163,11 @@ public class ApplicationItemProvider
 	 */
 	@Override
 	public String getText(Object object) {
-		return getString("_UI_Application_type");
+		Object labelValue = ((Application)object).getNomAppli();
+		String label = labelValue == null ? null : labelValue.toString();
+		return label == null || label.length() == 0 ?
+			getString("_UI_Application_type") :
+			getString("_UI_Application_type") + " " + label;
 	}
 
 	/**
@@ -154,6 +182,9 @@ public class ApplicationItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(Application.class)) {
+			case UiAndroidPackage.APPLICATION__NOM_APPLI:
+				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
+				return;
 			case UiAndroidPackage.APPLICATION__PAGES:
 			case UiAndroidPackage.APPLICATION__CLASSES:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));

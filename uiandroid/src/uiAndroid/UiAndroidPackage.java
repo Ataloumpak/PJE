@@ -807,13 +807,22 @@ public interface UiAndroidPackage extends EPackage {
 	int APPLICATION__ACTIVITE_PRINCIPALE = 2;
 
 	/**
+	 * The feature id for the '<em><b>Nom Appli</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int APPLICATION__NOM_APPLI = 3;
+
+	/**
 	 * The number of structural features of the '<em>Application</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int APPLICATION_FEATURE_COUNT = 3;
+	int APPLICATION_FEATURE_COUNT = 4;
 
 	/**
 	 * The number of operations of the '<em>Application</em>' class.
@@ -1036,7 +1045,7 @@ public interface UiAndroidPackage extends EPackage {
 	int ACTIVITE__CLASSE = CLASSE_FEATURE_COUNT + 0;
 
 	/**
-	 * The feature id for the '<em><b>Intent Package</b></em>' containment reference.
+	 * The feature id for the '<em><b>Intent Package</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1416,7 +1425,7 @@ public interface UiAndroidPackage extends EPackage {
 	 * @see uiAndroid.impl.UiAndroidPackageImpl#getint()
 	 * @generated
 	 */
-	int INT = 20;
+	int INT = 21;
 
 	/**
 	 * The meta object id for the '<em>String</em>' data type.
@@ -1426,7 +1435,7 @@ public interface UiAndroidPackage extends EPackage {
 	 * @see uiAndroid.impl.UiAndroidPackageImpl#getString()
 	 * @generated
 	 */
-	int STRING = 21;
+	int STRING = 20;
 
 	/**
 	 * The meta object id for the '<em>boolean</em>' data type.
@@ -1681,6 +1690,17 @@ public interface UiAndroidPackage extends EPackage {
 	EReference getApplication_Activite_Principale();
 
 	/**
+	 * Returns the meta object for the attribute '{@link uiAndroid.Application#getNomAppli <em>Nom Appli</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Nom Appli</em>'.
+	 * @see uiAndroid.Application#getNomAppli()
+	 * @see #getApplication()
+	 * @generated
+	 */
+	EAttribute getApplication_NomAppli();
+
+	/**
 	 * Returns the meta object for class '{@link uiAndroid.Classe <em>Classe</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1831,10 +1851,10 @@ public interface UiAndroidPackage extends EPackage {
 	EReference getActivite_Classe();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link uiAndroid.Activite#getIntentPackage <em>Intent Package</em>}'.
+	 * Returns the meta object for the containment reference list '{@link uiAndroid.Activite#getIntentPackage <em>Intent Package</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Intent Package</em>'.
+	 * @return the meta object for the containment reference list '<em>Intent Package</em>'.
 	 * @see uiAndroid.Activite#getIntentPackage()
 	 * @see #getActivite()
 	 * @generated
@@ -2207,6 +2227,14 @@ public interface UiAndroidPackage extends EPackage {
 		EReference APPLICATION__ACTIVITE_PRINCIPALE = eINSTANCE.getApplication_Activite_Principale();
 
 		/**
+		 * The meta object literal for the '<em><b>Nom Appli</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute APPLICATION__NOM_APPLI = eINSTANCE.getApplication_NomAppli();
+
+		/**
 		 * The meta object literal for the '{@link uiAndroid.impl.ClasseImpl <em>Classe</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -2327,7 +2355,7 @@ public interface UiAndroidPackage extends EPackage {
 		EReference ACTIVITE__CLASSE = eINSTANCE.getActivite_Classe();
 
 		/**
-		 * The meta object literal for the '<em><b>Intent Package</b></em>' containment reference feature.
+		 * The meta object literal for the '<em><b>Intent Package</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated

@@ -100,8 +100,11 @@ public class TextualElementItemProvider
 	 */
 	@Override
 	public String getText(Object object) {
-		TextualElement textualElement = (TextualElement)object;
-		return getString("_UI_TextualElement_type") + " " + textualElement.getId();
+		Object labelValue = ((TextualElement)object).getId();
+		String label = labelValue == null ? null : labelValue.toString();
+		return label == null || label.length() == 0 ?
+			getString("_UI_TextualElement_type") :
+			getString("_UI_TextualElement_type") + " " + label;
 	}
 
 	/**

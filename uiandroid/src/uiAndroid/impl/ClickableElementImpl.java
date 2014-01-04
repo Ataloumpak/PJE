@@ -16,7 +16,7 @@ import uiAndroid.UiAndroidPackage;
  *
  * @generated
  */
-public class ClickableElementImpl extends TextualElementImpl implements ClickableElement {
+public abstract class ClickableElementImpl extends TextualElementImpl implements ClickableElement {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

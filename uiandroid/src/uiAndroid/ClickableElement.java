@@ -10,7 +10,7 @@ package uiAndroid;
  *
  *
  * @see uiAndroid.UiAndroidPackage#getClickableElement()
- * @model
+ * @model abstract="true"
  * @generated
  */
 public interface ClickableElement extends TextualElement {

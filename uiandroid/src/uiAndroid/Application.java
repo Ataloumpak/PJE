@@ -17,6 +17,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link uiAndroid.Application#getPages <em>Pages</em>}</li>
  *   <li>{@link uiAndroid.Application#getClasses <em>Classes</em>}</li>
  *   <li>{@link uiAndroid.Application#getActivite_Principale <em>Activite Principale</em>}</li>
+ *   <li>{@link uiAndroid.Application#getNomAppli <em>Nom Appli</em>}</li>
  * </ul>
  * </p>
  *
@@ -82,5 +83,31 @@ public interface Application extends EObject {
 	 * @generated
 	 */
 	void setActivite_Principale(Activite value);
+
+	/**
+	 * Returns the value of the '<em><b>Nom Appli</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Nom Appli</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Nom Appli</em>' attribute.
+	 * @see #setNomAppli(String)
+	 * @see uiAndroid.UiAndroidPackage#getApplication_NomAppli()
+	 * @model dataType="uiAndroid.String" required="true" ordered="false"
+	 * @generated
+	 */
+	Object getNomAppli();
+
+	/**
+	 * Sets the value of the '{@link uiAndroid.Application#getNomAppli <em>Nom Appli</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Nom Appli</em>' attribute.
+	 * @see #getNomAppli()
+	 * @generated
+	 */
+	void setNomAppli(Object value);
 
 } // Application

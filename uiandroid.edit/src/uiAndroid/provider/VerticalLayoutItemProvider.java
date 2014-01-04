@@ -76,8 +76,11 @@ public class VerticalLayoutItemProvider
 	 */
 	@Override
 	public String getText(Object object) {
-		VerticalLayout verticalLayout = (VerticalLayout)object;
-		return getString("_UI_VerticalLayout_type") + " " + verticalLayout.getId();
+		Object labelValue = ((VerticalLayout)object).getId();
+		String label = labelValue == null ? null : labelValue.toString();
+		return label == null || label.length() == 0 ?
+			getString("_UI_VerticalLayout_type") :
+			getString("_UI_VerticalLayout_type") + " " + label;
 	}
 
 	/**

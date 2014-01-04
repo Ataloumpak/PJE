@@ -24,7 +24,7 @@ import uiAndroid.UiAndroidPackage;
  *
  * @generated
  */
-public class IntegerElementImpl extends ValueElementImpl implements IntegerElement {
+public abstract class IntegerElementImpl extends ValueElementImpl implements IntegerElement {
 	/**
 	 * The default value of the '{@link #getValue() <em>Value</em>}' attribute.
 	 * <!-- begin-user-doc -->

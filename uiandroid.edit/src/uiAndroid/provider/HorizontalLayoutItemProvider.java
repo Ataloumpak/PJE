@@ -76,8 +76,11 @@ public class HorizontalLayoutItemProvider
 	 */
 	@Override
 	public String getText(Object object) {
-		HorizontalLayout horizontalLayout = (HorizontalLayout)object;
-		return getString("_UI_HorizontalLayout_type") + " " + horizontalLayout.getId();
+		Object labelValue = ((HorizontalLayout)object).getId();
+		String label = labelValue == null ? null : labelValue.toString();
+		return label == null || label.length() == 0 ?
+			getString("_UI_HorizontalLayout_type") :
+			getString("_UI_HorizontalLayout_type") + " " + label;
 	}
 
 	/**

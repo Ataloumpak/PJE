@@ -1,5 +1,7 @@
 [comment encoding = UTF-8 /]
 [module generate('http:///uiAndroid.ecore')]
+[import uiAndroidGenCode2::common::generateJava/]
+[import uiAndroidGenCode2::common::generateLayout /]
 
 [template public generateElement(aApplication : Application)]
 [comment @main /]
@@ -12,6 +14,3 @@
 	[apage.generateElement()/]
 [/for]
 [/template]
-
-
-

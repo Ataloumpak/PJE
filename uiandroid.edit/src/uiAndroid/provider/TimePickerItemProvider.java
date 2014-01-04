@@ -76,8 +76,11 @@ public class TimePickerItemProvider
 	 */
 	@Override
 	public String getText(Object object) {
-		TimePicker timePicker = (TimePicker)object;
-		return getString("_UI_TimePicker_type") + " " + timePicker.getId();
+		Object labelValue = ((TimePicker)object).getId();
+		String label = labelValue == null ? null : labelValue.toString();
+		return label == null || label.length() == 0 ?
+			getString("_UI_TimePicker_type") :
+			getString("_UI_TimePicker_type") + " " + label;
 	}
 
 	/**

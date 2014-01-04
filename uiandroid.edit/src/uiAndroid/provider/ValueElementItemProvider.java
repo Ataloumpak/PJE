@@ -85,7 +85,7 @@ public class ValueElementItemProvider
 				 true,
 				 false,
 				 false,
-				 ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
 				 null,
 				 null));
 	}
@@ -175,8 +175,11 @@ public class ValueElementItemProvider
 	 */
 	@Override
 	public String getText(Object object) {
-		ValueElement valueElement = (ValueElement)object;
-		return getString("_UI_ValueElement_type") + " " + valueElement.getId();
+		Object labelValue = ((ValueElement)object).getId();
+		String label = labelValue == null ? null : labelValue.toString();
+		return label == null || label.length() == 0 ?
+			getString("_UI_ValueElement_type") :
+			getString("_UI_ValueElement_type") + " " + label;
 	}
 
 	/**

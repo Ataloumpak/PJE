@@ -37,7 +37,7 @@ public class ValueElementImpl extends MinimalEObjectImpl.Container implements Va
 	 * @generated
 	 * @ordered
 	 */
-	protected static final int ID_EDEFAULT = 0;
+	protected static final Object ID_EDEFAULT = null;
 
 	/**
 	 * The cached value of the '{@link #getId() <em>Id</em>}' attribute.
@@ -47,7 +47,7 @@ public class ValueElementImpl extends MinimalEObjectImpl.Container implements Va
 	 * @generated
 	 * @ordered
 	 */
-	protected int id = ID_EDEFAULT;
+	protected Object id = ID_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #getLayout_width() <em>Layout width</em>}' attribute.
@@ -133,7 +133,7 @@ public class ValueElementImpl extends MinimalEObjectImpl.Container implements Va
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public int getId() {
+	public Object getId() {
 		return id;
 	}
 
@@ -142,8 +142,8 @@ public class ValueElementImpl extends MinimalEObjectImpl.Container implements Va
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setId(int newId) {
-		int oldId = id;
+	public void setId(Object newId) {
+		Object oldId = id;
 		id = newId;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, UiAndroidPackage.VALUE_ELEMENT__ID, oldId, id));
@@ -241,7 +241,7 @@ public class ValueElementImpl extends MinimalEObjectImpl.Container implements Va
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
 			case UiAndroidPackage.VALUE_ELEMENT__ID:
-				setId((Integer)newValue);
+				setId((Object)newValue);
 				return;
 			case UiAndroidPackage.VALUE_ELEMENT__LAYOUT_WIDTH:
 				setLayout_width((Integer)newValue);
@@ -289,7 +289,7 @@ public class ValueElementImpl extends MinimalEObjectImpl.Container implements Va
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
 			case UiAndroidPackage.VALUE_ELEMENT__ID:
-				return id != ID_EDEFAULT;
+				return ID_EDEFAULT == null ? id != null : !ID_EDEFAULT.equals(id);
 			case UiAndroidPackage.VALUE_ELEMENT__LAYOUT_WIDTH:
 				return layout_width != LAYOUT_WIDTH_EDEFAULT;
 			case UiAndroidPackage.VALUE_ELEMENT__LAYOUT_HEIGHT:

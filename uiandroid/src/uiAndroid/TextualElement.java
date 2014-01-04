@@ -16,7 +16,7 @@ package uiAndroid;
  * </p>
  *
  * @see uiAndroid.UiAndroidPackage#getTextualElement()
- * @model
+ * @model abstract="true"
  * @generated
  */
 public interface TextualElement extends ValueElement {

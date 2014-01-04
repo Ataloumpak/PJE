@@ -76,8 +76,11 @@ public class CheckboxItemProvider
 	 */
 	@Override
 	public String getText(Object object) {
-		Checkbox checkbox = (Checkbox)object;
-		return getString("_UI_Checkbox_type") + " " + checkbox.getId();
+		Object labelValue = ((Checkbox)object).getId();
+		String label = labelValue == null ? null : labelValue.toString();
+		return label == null || label.length() == 0 ?
+			getString("_UI_Checkbox_type") :
+			getString("_UI_Checkbox_type") + " " + label;
 	}
 
 	/**

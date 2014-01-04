@@ -103,8 +103,11 @@ public class BooleanElementItemProvider
 	 */
 	@Override
 	public String getText(Object object) {
-		BooleanElement booleanElement = (BooleanElement)object;
-		return getString("_UI_BooleanElement_type") + " " + booleanElement.getId();
+		Object labelValue = ((BooleanElement)object).getId();
+		String label = labelValue == null ? null : labelValue.toString();
+		return label == null || label.length() == 0 ?
+			getString("_UI_BooleanElement_type") :
+			getString("_UI_BooleanElement_type") + " " + label;
 	}
 
 	/**

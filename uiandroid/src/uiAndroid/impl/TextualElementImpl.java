@@ -21,7 +21,7 @@ import uiAndroid.UiAndroidPackage;
  *
  * @generated
  */
-public class TextualElementImpl extends ValueElementImpl implements TextualElement {
+public abstract class TextualElementImpl extends ValueElementImpl implements TextualElement {
 	/**
 	 * The default value of the '{@link #getValue() <em>Value</em>}' attribute.
 	 * <!-- begin-user-doc -->

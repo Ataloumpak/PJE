@@ -59,10 +59,8 @@ public class UiAndroidFactoryImpl extends EFactoryImpl implements UiAndroidFacto
 		switch (eClass.getClassifierID()) {
 			case UiAndroidPackage.PAGE: return createPage();
 			case UiAndroidPackage.TEXT: return createText();
-			case UiAndroidPackage.TEXTUAL_ELEMENT: return createTextualElement();
 			case UiAndroidPackage.VALUE_ELEMENT: return createValueElement();
 			case UiAndroidPackage.BUTTON: return createButton();
-			case UiAndroidPackage.CLICKABLE_ELEMENT: return createClickableElement();
 			case UiAndroidPackage.VERTICAL_LAYOUT: return createVerticalLayout();
 			case UiAndroidPackage.HORIZONTAL_LAYOUT: return createHorizontalLayout();
 			case UiAndroidPackage.APPLICATION: return createApplication();
@@ -71,8 +69,6 @@ public class UiAndroidFactoryImpl extends EFactoryImpl implements UiAndroidFacto
 			case UiAndroidPackage.METHODE: return createMethode();
 			case UiAndroidPackage.ACTIVITE: return createActivite();
 			case UiAndroidPackage.INTENT_PACKAGE: return createIntentPackage();
-			case UiAndroidPackage.INTEGER_ELEMENT: return createIntegerElement();
-			case UiAndroidPackage.BOOLEAN_ELEMENT: return createBooleanElement();
 			case UiAndroidPackage.CHECKBOX: return createCheckbox();
 			case UiAndroidPackage.TIME_PICKER: return createTimePicker();
 			default:
@@ -88,10 +84,10 @@ public class UiAndroidFactoryImpl extends EFactoryImpl implements UiAndroidFacto
 	@Override
 	public Object createFromString(EDataType eDataType, String initialValue) {
 		switch (eDataType.getClassifierID()) {
-			case UiAndroidPackage.INT:
-				return createintFromString(eDataType, initialValue);
 			case UiAndroidPackage.STRING:
 				return createStringFromString(eDataType, initialValue);
+			case UiAndroidPackage.INT:
+				return createintFromString(eDataType, initialValue);
 			case UiAndroidPackage.BOOLEAN:
 				return createbooleanFromString(eDataType, initialValue);
 			default:
@@ -107,10 +103,10 @@ public class UiAndroidFactoryImpl extends EFactoryImpl implements UiAndroidFacto
 	@Override
 	public String convertToString(EDataType eDataType, Object instanceValue) {
 		switch (eDataType.getClassifierID()) {
-			case UiAndroidPackage.INT:
-				return convertintToString(eDataType, instanceValue);
 			case UiAndroidPackage.STRING:
 				return convertStringToString(eDataType, instanceValue);
+			case UiAndroidPackage.INT:
+				return convertintToString(eDataType, instanceValue);
 			case UiAndroidPackage.BOOLEAN:
 				return convertbooleanToString(eDataType, instanceValue);
 			default:
@@ -143,16 +139,6 @@ public class UiAndroidFactoryImpl extends EFactoryImpl implements UiAndroidFacto
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public TextualElement createTextualElement() {
-		TextualElementImpl textualElement = new TextualElementImpl();
-		return textualElement;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public ValueElement createValueElement() {
 		ValueElementImpl valueElement = new ValueElementImpl();
 		return valueElement;
@@ -166,16 +152,6 @@ public class UiAndroidFactoryImpl extends EFactoryImpl implements UiAndroidFacto
 	public Button createButton() {
 		ButtonImpl button = new ButtonImpl();
 		return button;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public ClickableElement createClickableElement() {
-		ClickableElementImpl clickableElement = new ClickableElementImpl();
-		return clickableElement;
 	}
 
 	/**
@@ -256,26 +232,6 @@ public class UiAndroidFactoryImpl extends EFactoryImpl implements UiAndroidFacto
 	public IntentPackage createIntentPackage() {
 		IntentPackageImpl intentPackage = new IntentPackageImpl();
 		return intentPackage;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public IntegerElement createIntegerElement() {
-		IntegerElementImpl integerElement = new IntegerElementImpl();
-		return integerElement;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public BooleanElement createBooleanElement() {
-		BooleanElementImpl booleanElement = new BooleanElementImpl();
-		return booleanElement;
 	}
 
 	/**
