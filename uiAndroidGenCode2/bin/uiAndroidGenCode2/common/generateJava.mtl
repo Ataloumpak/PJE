@@ -41,7 +41,6 @@ public class [aActivite.nomClasse/] extends Activity {
 		[aIntent.generateOnClickListener()/]
 [/for]
 	}
-	
 }
 [/template]
 

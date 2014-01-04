@@ -1,15 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <uiAndroid:Application xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:uiAndroid="http:///uiAndroid.ecore">
-  <pages>
+  <pages nom="layout">
     <layout xsi:type="uiAndroid:VerticalLayout">
       <views xsi:type="uiAndroid:Button" id="test" value="test"/>
-      <views xsi:type="uiAndroid:Text" value=""/>
+      <views xsi:type="uiAndroid:Text" id="textbox" value="temp"/>
     </layout>
   </pages>
-  <classes>
-    <attributs/>
-    <methodes>
-      <paramètres/>
+  <classes nomClasse="Jeu">
+    <methodes nomMethode="jouer" returnType="boolean" corpsMethode="">
+      <paramètres nomAttribut="tour" typeAttribut="int"/>
     </methodes>
   </classes>
   <classes xsi:type="uiAndroid:Activite" nomClasse="Main">

@@ -237,8 +237,8 @@
       <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_waC4k1g6EeOg1No9UXAcmA" value="1"/>
     </ownedEnd>
     <ownedEnd xmi:type="uml:Property" xmi:id="_waBqcFg6EeOg1No9UXAcmA" name="page" type="_kIL1QEbqEeOG7JZTkkmz2A" aggregation="shared" association="_waC4kFg6EeOg1No9UXAcmA">
-      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_waBqcVg6EeOg1No9UXAcmA" value="1"/>
-      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_waBqclg6EeOg1No9UXAcmA" value="1"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_waBqcVg6EeOg1No9UXAcmA"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_waBqclg6EeOg1No9UXAcmA" value="*"/>
     </ownedEnd>
   </packagedElement>
   <packagedElement xmi:type="uml:Class" xmi:id="_FS79kFg8EeOg1No9UXAcmA" name="IntentPackage">

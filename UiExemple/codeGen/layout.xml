@@ -1,0 +1,16 @@
+	<layout>
+		<button
+				android:id="@+id/test"
+				android:layout_width="0"
+				android:layout_height="0"
+				android:layout_gravity="0"
+		/>
+		<textView 
+				android:id="@+id/textbox"
+				android:layout_width="0"
+				android:layout_height="0"
+				android:layout_gravity="0"
+		>
+			temp
+		</textView>
+	</layout>

@@ -4,37 +4,34 @@
 
 [comment ---- Partie XML ---------------------------------------- /]
 
-[template public generateElement(aPage : Page)]
-[file (aPage.nom+'.xml', false, 'UTF-8')]
-[generateElement(aPage.layout)/]
-[/file]
+[template public generateLayoutElement(aPage : Page)]
+[generateLayoutElement(aPage.layout)/]
 [/template]
 
-[template public generateElement(aView : View)]
+[template public generateLayoutElement(aView : View)]
 Problème avec un element du type [aView.toString()/]
 [/template]
 
 
-[template public generateElement(aLayout : Layout)]
+[template public generateLayoutElement(aLayout : Layout)]
 <layout>
 [for(child : View | aLayout.views)] 
-	[child.generateElement()/]
+	[child.generateLayoutElement()/]
 [/for]
 </layout>
 [/template]
 
 
 
-[template public generateElement(aButton : Button)]
+[template public generateLayoutElement(aButton : Button)]
 <button
 	[generateParameterofView(aButton)/]
 />
 [/template]
 
-[template public generateElement(aText : Text)]
+[template public generateLayoutElement(aText : Text)]
 <textView 
 	[generateParameterofView(aText)/]
-
 >
 	[aText.value/]
 </textView>
